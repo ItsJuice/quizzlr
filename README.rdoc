@@ -1,3 +1,5 @@
 = Quizzlr
 
-This project rocks and uses MIT-LICENSE.
+A simple quiz engine using Mongoid. Each quiz can have multiple questions, each with multiple answers, one of which can be correct.
+
+If using images you can specify their dimensions and storage path by creating an initializer and configuring the Quizzlr.image_upload_path, .into_image_dimensions and .question_image_dimensions
