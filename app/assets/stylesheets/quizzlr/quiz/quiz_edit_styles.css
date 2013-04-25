@@ -1,0 +1,24 @@
+.quiz, .index {
+  padding: 20px;
+}
+
+.quiz textarea {
+  height: 75px;
+}
+
+.quiz label, .quiz input, .quiz a {
+  vertical-align: top;
+}
+
+.questions {
+  margin: 40px 0;
+}
+
+.question {
+  border-top: 1px solid #000;
+  padding: 20px;
+}
+
+.answers textarea {
+  height: 40px;
+}

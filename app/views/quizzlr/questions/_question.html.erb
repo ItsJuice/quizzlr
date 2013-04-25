@@ -1,0 +1,16 @@
+<div id="step-<%= number %>">    
+
+    <h3>QUESTION <%= number %>/<%= @quiz.questions.size %></h3>
+    <h4><%= question.text %></h4>
+    <div class="question-block">
+        <% if question.image.present? %>
+          <div class="question-image">
+              <%= image_tag question.image.question_image.url %>
+          </div>
+        <% end %>  
+        <div class="question-options">
+           <%= render question.answers %>
+       </div>
+   </div>    
+   <input class="submit msch-quiz-button" type="submit" name="submit_<%= number %>" id="submit_<%= number %>" value="<%= quiz_button_text(number, @quiz.questions.size) %>" />
+</div>

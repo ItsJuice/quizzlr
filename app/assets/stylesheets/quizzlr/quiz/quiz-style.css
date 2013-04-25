@@ -1,0 +1,252 @@
+body {
+	font-family: 'Helvetica', Arial, sans-serif;
+	color: #666;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFF;
+}
+
+
+#container {
+  text-align: left;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+/*  min-height: 600px;
+*/  background-color: white;
+  margin-bottom: 100px; 
+  height:400px;
+}
+
+#page-container {
+  padding:20px;
+}
+
+#wrapper-reverse {
+  text-align:center;
+  min-height:700px;
+  margin-bottom:100px;
+}
+
+
+
+h3 {
+	font-family: 'Helvetica', Arial, sans-serif;
+  font-size:1.5em;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+h4 {
+	font-family: 'Helvetica', Arial, sans-serif;
+  font-size:1.4em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+
+.question-block {
+border-top: 1px solid #CCC;
+border-bottom: 1px solid #CCC;
+clear: both;
+height:177px;
+}
+
+label {
+	margin-top: 5px;
+	font-size: 1.4em;
+}
+
+.question-image {
+	float: left;
+	margin-right: 20px;
+}
+
+.question-options {
+	float: left;
+	display: block;
+	padding-top: 10px;
+}
+
+.question-rule {
+	margin: 0px;
+}
+
+.correct {
+  border-bottom: 0px dashed #ccc;
+  display: inline;
+}
+
+
+.msch-quiz-button {
+	float:right;
+}
+
+.msch-quiz-button-disabled {
+	
+	/* While button is disabled, stop it looking clickable */
+	cursor: default !important;
+
+	/* Make the disabled button grey with no arrow image */
+	background-color: #ccc !important;
+		background-image:url( '../../assets/img/submit-arrow.png' );
+		background-image:url( '../../assets/img/submit-arrow.png' );
+		background-position:right;
+		background-repeat:no-repeat;
+
+}
+
+.msch-quiz-button-disabled:hover {
+	
+	/* Visually override the button hover by making it the same colour as the off state */
+	background: #ccc !important;
+
+}
+
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner {
+border : none;
+}
+input[type="submit"]:focus, input[type="button"]:focus {
+	outline : none;
+}
+.clear {
+	clear: both;
+}
+
+/*#msch-container #step-1, #step-2, #step-3, #step-4, #step-5, #step-6, #step-7 {
+	display: none;
+}*/
+
+#msch-container 
+#step-1, 
+#step-2, 
+#step-3, 
+#step-4, 
+#step-5, 
+#step-6, 
+#step-7, 
+#step-8, 
+#step-9, 
+#step-10, 
+#step-11, 
+#step-12, 
+#step-13, 
+#step-14, 
+#step-15, 
+#step-16, 
+#step-17, 
+#step-18, 
+#step-19, 
+#step-20 {
+	display: none;
+	height:0px;
+}
+
+.intro {
+
+}
+
+#msch-container #step-1 {
+	display: block;
+}
+
+#msch-container input.submit {
+		margin-top: 10px;
+		background: #333;
+		color: #FFF;
+		border: none;
+		cursor: pointer;
+		position: relative;
+		float:right;
+		padding: 10px 80px 10px 30px;
+		font-family: 'Helvetica', Arial, sans-serif;
+		font-size:18px;
+/*		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;*/
+		height:50px;
+		background-image:url( '../../assets/img/submit-arrow.png' );
+		background-position:right;
+		background-repeat:no-repeat;
+		text-transform: uppercase;
+}
+
+#msch-container input.submit:hover {
+		background: #666;
+		color: #FFF;
+		border: none;
+		cursor: pointer;
+		position: relative;
+		float:right;
+		padding: 10px 80px 10px 30px;
+		font-family: 'Helvetica', Arial, sans-serif;
+		font-size:18px;
+/*		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;*/
+		height:50px;	
+		background-image:url( '../../assets/img/submit-arrow.png' );
+		background-position:right;
+		background-repeat:no-repeat;	
+}
+
+
+#msch-progress_bar {
+	/*background: url('../images/progress_bar.png') no-repeat;*/
+	font-family: 'Helvetica', Arial, sans-serif;
+	background-color: #CCC;
+	width: 339px;
+	height: 34px;
+	margin: 0 auto;
+	position: relative;
+}
+#msch-progress {
+	/*background: url('../images/progress.png') repeat-x;*/
+	background-color: #333;
+	margin-top:30px;
+	width: 0px;
+	height: 34px;/*    
+	border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;*/
+}
+#msch-progress_text {
+	position: relative;
+	line-height: 21px;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	width: 339px;
+	height: 34px;
+	top: -27px;
+	left: 0;
+}
+
+.msch-radiospacing {
+ clear:both;
+ height:12px;
+}
+
+.progress-wrap{
+	position:relative;
+}
+.progress-holder{
+	position:absolute;
+	top:265px;
+}
+
+.large {
+	font-size: 150%;
+}
+.spacing10 {
+ height:10px;
+ clear: both;
+}
+
+.spacing20 {
+ height:20px;
+ clear: both;
+}
+.spacing40 {
+ height:40px;
+ clear: both;
+}

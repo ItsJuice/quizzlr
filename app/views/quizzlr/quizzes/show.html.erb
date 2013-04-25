@@ -1,0 +1,92 @@
+<div id="page-container">
+
+    <a name="quiz-top" id="quiz-top"></a>
+    <div id="quiz-loader"> 
+
+
+        <a name="top-of-form" id="top-of-form"></a>
+
+        <div id="msch-container">
+
+            <%= form_tag results_for_quiz_path(@quiz, format: :json), remote: true, id: "quiz_form"  do %>
+            <!-- <form id="quiz_form" action="<%= results_for_quiz_path @quiz %>" method="post" remote="true"> -->
+
+
+
+
+                <div id="intro">
+                    <div style="float:left;margin-left:100px;">
+                        <h4><%= @quiz.description %>
+                        </h4>
+                    </div>
+
+                    <input class="submit" type="submit" id="start-quiz" value="Take the Quiz" />
+                    <div style="float:left;margin-top:20px;margin-left:100px;"><h3>YOU HAVE <span id="attempts-remaining">3</span> ATTEMPTS LEFT.</h3></div>
+
+                    <div class="spacing20"></div>
+                    <%= image_tag @quiz.intro_image.quiz_image.url %>
+
+                </div>
+
+
+                <div id="questions">
+                  <% @quiz.questions.each_with_index do |q, i| %>
+                    <%= render partial: 'quizzlr/questions/question', locals: {question: q, number: (i+1)} %>
+                  <% end %>
+                </div> 
+
+
+
+
+
+<div id="results">    
+
+    <!-- -->
+    <!-- -->
+    <!-- ***** Quiz results display here ***** -->
+    <!-- -->
+    <!-- -->
+    <div class="form">
+
+        <div class="spacing20"></div>
+        <%= image_tag @quiz.final_image.quiz_image.url %>
+        <div class="spacing20"></div>
+
+        <div id="quiz-results-text" style="margin-left:100px;">You scored 56%</div>
+
+        <div id="quiz-attempts-text" style="float:left;margin-top:20px;margin-left:100px;">You have 3 attempts remaining</div>
+    </div> 
+
+
+    <!-- -->
+    <!-- -->
+    <!-- ***** Try Again button (strictly speaking this could be an A tag) ***** -->
+    <!-- -->
+    <!-- -->
+    <a class="submit msch-quiz-button" name="quiz-retry-button" id="quiz-retry-button" href="<%= quiz_path @quiz %>">Try Again</a>
+
+
+</div> 
+
+
+<!-- </form> -->
+<% end %>
+
+
+<div class="progress-wrap">
+    <div class="progress-holder">
+        <div id="msch-progress_bar">
+            <div id="msch-progress"></div>
+            <div id="msch-progress_text">0% Complete</div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+<a name="quiz-bottom" id="quiz-bottom"></a> 
+<!-- END OF QUIZ -->
+
+
+</div> <!-- END OF CONTAINER -->

@@ -1,0 +1,31 @@
+<div class="quiz">
+  <%= form_for @quiz do |quiz| %>
+    <%= quiz.error_messages %>
+    
+    <%= quiz.label :name %>
+    <%= quiz.text_field :name %>
+    <br />
+
+    <%= quiz.label :description %>
+    <%= quiz.text_area :description %>
+
+    <br />
+
+    <%= quiz.label :intro_image %>
+    <%= quiz.file_field :intro_image %>   
+
+    <br />
+
+    <%= quiz.label :final_image %>
+    <%= quiz.file_field :final_image %>   
+
+    <div class="questions">
+      <%= quiz.fields_for :questions do |builder| %>
+        <%= render 'question_fields', :f => builder %>
+      <% end -%>
+    </div>
+    <p><%= link_to_add_fields "Add Question", quiz, :questions %></p>
+
+    <%= quiz.submit %>
+  <% end %>
+</div>

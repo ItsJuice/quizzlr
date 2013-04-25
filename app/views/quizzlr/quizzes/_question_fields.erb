@@ -1,0 +1,18 @@
+<div class="question fields">
+  <%= f.error_messages %>
+  <%= f.label :text, "Question" %>
+  <%= f.text_area :text %>
+  <%= link_to_remove_fields "remove", f %>
+
+  <br />
+
+  <%= f.label :image %>
+  <%= f.file_field :image %>   
+
+  <div class="answers">
+    <%= f.fields_for :answers do |builder| %>
+      <%= render 'answer_fields', :f => builder %>
+    <% end %>
+  </div>
+  <p><%= link_to_add_fields "Add Answer", f, :answers %></p>
+</div>

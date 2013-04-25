@@ -1,0 +1,4 @@
+<% @quizzes.each do |quiz| -%>
+  <div><%= link_to quiz.name, quiz %> (<%= link_to 'Edit', edit_quiz_path(quiz) %>)</div>
+<% end -%>
+<div><%= link_to "Add new", new_quiz_path %></div>
